@@ -1,0 +1,61 @@
+The following files consists of the solutions for the problem statement sent to me as the first step of the evaluation purpose of the 'Cloud Backend Engineer' internship opportunity.
+
+The following compressed file consists of four files: Dev2 folder, Students.xlsx,Schools.xlsx & Books.xlsx.
+
+Dev2 Folder: This folder consist all the main files of the solution. 
+	     The 'carnot2' folder is the one in which the virtual environment was created and inside of it consists of the 'src_project'folder which holds the 'programstatement' folder in which the sublime text project file is present,
+	     and the main django application 'std' of the project.
+
+Students.xlsx:	This excel file consist of the data included in the Students sheet of the provided 'dummy_data.xls'.
+
+
+Schools.xlsx:	This excel file consist of the data included in the Shools sheet of the provided 'dummy_data.xls'. 
+
+
+Books.xlsx:	This excel file consist of the data included in the Books sheet of the provided 'dummy_data.xls'. 
+
+Three different excel sheets were made just for my convenience and among them in Schools and Books excel file an extra empty column 'id' was created for the django file importing purpose and the 'ID' column was edited and kept blanck for the similar reason.
+
+Basic requirements and packages installed: 
+
+Python 3.8,
+Pip and Pipenv(default version)
+virtualenv,
+Django 2.1.5,
+django-import-export
+
+Django admin name: rishavP
+Django admin password : magnus@4000
+
+All the HTML templates that are used are 'In app templates' residing inside the 'std' django app in the folder 'templates':
+
+Basic.html: 			This template is the basic template used for the default home webpage and is used as an extension for the 'import.html'
+import.html: 			Extends to the Basic.html and it depicts the default page for the django project. It consists of three hyperlinks each linking to the 'Student_import.html','School_import.html' & 'Book_import.html' webpages.
+Student_import.html: 		This template is the frontend interface for uploading the 'Students.xlsx' file into the django database.
+School_import.html: 		This template is the frontend interface for uploading the 'Schools.xlsx' file into the django database.
+Book_import.html: 		This template is the frontend interface for uploading the 'Books.xlsx' file into the django database.	      
+student_details_search.html:	This template renders the required student details search page consits of a form where user can enter the Student ID and name to search the corresponding student details from the database.
+student_details.html:		This template renders the webpage which shows the searched student details in tabular format.
+
+
+The python files in the 'std' app that were made changes:
+
+admin.py: 	This consists of all the code and method for the file import export features made into the django admin panel.
+models.py: 	Consists of code for the basic django database tables made i.e Students,Schools and Books database and their dependecies and functions.
+Forms.py: 	Contains all the form django form methods used for webpages mainly the 'students_details_search.html'
+views.py:	All the web pages and its funtions and features are defined here by particular methods.
+resources.py:	All the model resources for importing datas into the models has been defined here.
+
+programstatement/urls.py: It contains all the necessary url paths of the webpages defined.
+
+
+*** PROJECT COMPLETION & SUCCESS STATUS ***
+
+Along with all the work done this project is not fully completed yet due to some unprecendented errors being faced while uploading all the three excel files into the django database and currently unaware of the exact solutions for troubleshooting those errors.
+
+Errors facing: In the django admin panel while uploading the necessary excel files into the corresponding database tables its showing 'KeyError : "id" ' while a separate blanck 'id' column was made in each of the excel files for django to put its respective id's in default.
+
+Because of no data being transmitted into the database due to the errors facing, hosting the project into a cloud server was not possible.
+
+But a successfull attempt has ben made to create the outline of the django application with everything running well except making the database populated with datas from the excel files.
+Once the error can be troubleshooted successfully the project can serve the necessary solution of the problem statement. 
